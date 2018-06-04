@@ -1,0 +1,18 @@
+.container{
+    padding-top:3rem;
+}
+
+.row {
+    margin-bottom: 1.5rem;
+}
+.btn{
+    background-color: #009688;
+    border-color: #009688;
+
+}
+.form-cotrol:focus{
+    border-color: #009688;
+}
+fa{
+    padding-right:0.5rem;
+}
