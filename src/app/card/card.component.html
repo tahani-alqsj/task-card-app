@@ -1,9 +1,15 @@
-<div class="card">
+<div *ngIf="task.status" class="card" (click)="statusToggle()" [class.completed]="task.completed">
+    <div class="card-header" >
+        <span class="del" align="left"><fa (click)="delStatusToggle()" name="minus-square"></fa>Delete</span>
+    </div>
     <div class="card-body">
         <p>{{ task.content }}</p>
     </div>
     <div class="card-footer">
-        <fa name="times"></fa>Not complete
+        
+        <span *ngIf="!task.completed"><fa name="times"></fa>Not complete</span>
+        <span *ngIf="task.completed"><fa name="check"></fa>Completed</span>
+        
 
     </div>
 </div>
